@@ -1,0 +1,15 @@
+class main {
+  public static void main(String[] args) {
+
+    String[] ANIMAL_ID = {"A434523", "A562649", "A524634", "A465637"};
+    String[] ANIMAL_TYPE = {"cat", "dog", "dog", "dog"};
+    String[] ANIMAL_NAME = {"NULL", "NULL", "Belle", "Conmmander"};
+
+    for (int n = 0; n < ANIMAL_NAME.length; n++) {
+      if (ANIMAL_NAME[n].equals("NULL"))
+        continue;
+      else System.out.println(ANIMAL_ID[n]);
+
+    }
+  }
+}
