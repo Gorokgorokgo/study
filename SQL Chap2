@@ -1,0 +1,62 @@
+class main {
+  public static void main(String[] args) {
+
+    int[] ANIMAL_ID = new int[100];
+    String[] ANIMAL_NAME = new String[100];
+    String[] ANIMAL_DATETIME = new String[100];
+    int count = 0;
+    int temp;
+    String temp_s;
+
+    ANIMAL_ID[count] = 4;
+    ANIMAL_NAME[count] = "Shelly";
+    ANIMAL_DATETIME[count] = "2015-01-29 15:01:00";
+    count++;
+
+    ANIMAL_ID[count] = 2;
+    ANIMAL_NAME[count] = "Jackie";
+    ANIMAL_DATETIME[count] = "2016-01-03 16:25:00";
+    count++;
+
+    ANIMAL_ID[count] = 5;
+    ANIMAL_NAME[count] = "Rocky";
+    ANIMAL_DATETIME[count] = "2016-06-07 09:17:00";
+    count++;
+
+    ANIMAL_ID[count] = 1;
+    ANIMAL_NAME[count] = "*Sam";
+    ANIMAL_DATETIME[count] = "2016-03-13 11:17:00";
+    count++;
+
+    ANIMAL_ID[count] = 3;
+    ANIMAL_NAME[count] = "Benji";
+    ANIMAL_DATETIME[count] = "2016-04-19 13:28:00";
+    count++;
+
+
+    for (int a = 0; a < count; a++) {
+      for (int b = (a + 1); b < count; b++) {
+        if (ANIMAL_ID[a] < ANIMAL_ID[b]) {
+          temp = ANIMAL_ID[b];
+          ANIMAL_ID[b] = ANIMAL_ID[a];
+          ANIMAL_ID[a] = temp;
+
+          temp_s = ANIMAL_NAME[b];
+          ANIMAL_NAME[b] = ANIMAL_NAME[a];
+          ANIMAL_NAME[a] = temp_s;
+
+          temp_s = ANIMAL_DATETIME[b];
+          ANIMAL_DATETIME[b] = ANIMAL_DATETIME[a];
+          ANIMAL_DATETIME[a] = temp_s;
+        }
+
+      }
+    }
+    for (int i = 0; i < count; i++) {
+      System.out.println("Name : " + ANIMAL_NAME[i]);
+      System.out.println("Datetime : " + ANIMAL_DATETIME[i]);
+      System.out.println();
+    }
+    
+  }
+}
