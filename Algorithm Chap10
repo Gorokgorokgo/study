@@ -1,0 +1,16 @@
+class Solution {
+    public double solution(int[] numbers) {
+        double answer = 0;
+        double sum = 0;
+
+        for (int a = 0; a < numbers.length; a++) {
+          if (0 <= numbers[a] && numbers[a] <= 1000)
+            sum += numbers[a];
+        }
+
+        answer = sum / numbers.length;
+
+        
+        return answer;
+    }
+} 
