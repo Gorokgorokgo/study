@@ -1,0 +1,21 @@
+class Solution {
+    public int[] solution(long n) {
+        int a = 0;
+        long num = 0;
+
+        num = n;
+        while(n!=0){
+          n /= 10;
+          a++;
+        }
+
+        int[] nArr = new int[a];
+
+        for (int count = 0; count < a; count++) {
+          nArr[count] = (int)(num % 10);
+          num /= 10;
+        }
+        return nArr;
+     
+    }
+}
