@@ -1,0 +1,7 @@
+class Solution {
+    public int solution(String s) {
+        int s2 = Integer.valueOf(s);
+              
+        return s2;
+    }
+}
