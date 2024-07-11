@@ -1,7 +1,7 @@
 class Solution {
     public long solution(long n) {
         
-        double answer = 0;
+        long answer = 0;
 
         for (int x = 1; x < n ; x++){
           if (x * x == n){
@@ -11,6 +11,6 @@ class Solution {
             answer = -1;
           }
         }
-        return (long) answer;
+        return answer;
     }
 }
