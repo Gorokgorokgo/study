@@ -1,0 +1,28 @@
+class Solution {
+    public long solution(long n) {
+    
+    long result = 0;
+    String s_n = "" + n;
+    int jari = s_n.length();
+    long[] arr_n = new long[jari];
+    long temp;
+
+    for (int i = 0; i < jari; i++) {
+      arr_n[jari - 1 - i] = n % 10;
+      n /= 10;
+    }
+
+    for (int i = 0; i < jari; i++)
+      for (int j = i + 1; j < jari; j++)
+        if (arr_n[i] < arr_n[j]) {
+          temp = arr_n[i];
+          arr_n[i] = arr_n[j];
+          arr_n[j] = temp;
+        }
+
+    for (int i = 0; i < jari; i++)
+      result += arr_n[jari - 1 - i] * Math.pow(10, i);
+
+    return result;
+    }
+}
