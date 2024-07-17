@@ -1,0 +1,29 @@
+class Solution {
+    public boolean solution(int x) {
+        boolean answer = true;
+        int clone_x = x;
+        String s_x = "" + clone_x;
+        int x_jari = s_x.length();
+        int[] Arr_x = new int[x_jari];
+        int sum = 0;
+   
+        if (1 <= x && x <= 10000) {
+          for (int i = 0; i < x_jari; i++) {
+            Arr_x[i] = clone_x % 10;
+            clone_x /= 10;
+          }
+
+          for (int i = 0; i < x_jari; i++){
+            sum += Arr_x[i];
+          }
+
+          if (x % sum == 0){
+            answer = true;
+          } else {
+                answer = false;
+            }
+        
+         }
+          return answer;
+    }
+}
