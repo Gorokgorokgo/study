@@ -1,0 +1,26 @@
+class Solution {
+    public long solution(int a, int b) {
+        long answer = 0;
+        
+        int a1 = a;
+        int b1 = b;
+
+        if (a > b) {
+          while ((a1 - b) != 0)
+            answer += --a1;
+
+          answer += a;
+
+        } else if (a < b) {
+          while ((b1 - a) != 0)
+            answer += --b1;
+
+          answer += b;
+
+        } else
+              answer = a;
+        
+        return answer;
+        
+    }
+}
